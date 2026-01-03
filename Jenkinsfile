@@ -14,30 +14,6 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t $DOCKER_IMAGE .'
-            }
-        }
-
-        stage('Deploy App') {
-            steps {
-                sh '''
-                docker rm -f node-app || true
-                docker run -d -p 3000:3000 --name node-app $DOCKER_IMAGE
-                '''
-            }
-        }
-
-        stage('Test App') {
-            steps {
-                sh '''
-                curl -f http://localhost:3000/health
-                '''
-            }
-        }
-    }
-
     post {
         success {
             emailext(
