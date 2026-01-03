@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "hardik/node-app:v1"
+        DOCKER_IMAGE = "hardik/email-notification:v1"
         EMAIL_TO = "hardikaws@yopmail.com"   // Change to your email
     }
 
@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/hardiksharma1998/node-devops-app.git'
+                    url: 'https://github.com/hardiksharma1998/email-notification-devops.git'
             }
         }
 
