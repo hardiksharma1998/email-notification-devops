@@ -13,6 +13,7 @@ pipeline {
                     url: 'https://github.com/hardiksharma1998/email-notification-devops.git'
             }
         }
+    }
 
     post {
         success {
