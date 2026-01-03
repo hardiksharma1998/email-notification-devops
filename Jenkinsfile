@@ -21,7 +21,7 @@ pipeline {
                 to: "${EMAIL_TO}",
                 subject: "✅ SUCCESS: Jenkins Job ${env.JOB_NAME} Build ${env.BUILD_NUMBER}",
                 body: """\
-Build SUCCESS!
+Build SUCCESS!!!!!!!
 Job: ${env.JOB_NAME}
 Build Number: ${env.BUILD_NUMBER}
 Build URL: ${env.BUILD_URL}
